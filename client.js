@@ -23,9 +23,9 @@ const fetchByUsername = async (username) => {
       rows: [user],
     } = await client.query(
       `
-        SELECT 
+        SELECT *
         FROM users
-        WHERE name = $1;
+        WHERE username = $1;
     `,
       [username]
     );
